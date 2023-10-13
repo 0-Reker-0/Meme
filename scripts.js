@@ -17,3 +17,4 @@ $(document).ready(function() {
 		$("#main").html('');
 	});
 });
+//lol idi na huy))))
