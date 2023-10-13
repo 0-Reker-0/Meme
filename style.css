@@ -1,0 +1,40 @@
+body{
+	text-align: center;
+	font-family: Courier, monospace;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+.text{
+	width: 250px;
+	--clr: black;
+	--outline: 0px solid black;
+	text-align: center;
+	border: var(--outline);
+	color: var(--clr);
+	border-bottom: 0.5px solid black;
+	transition: outline-offset 200ms ease;
+}
+.button{
+	width: 150px;
+	height: 20px;
+	--brdr: 0.1px solid grey;
+	--clr: black;
+	font-size: 70%;
+	font: 1 rem monospace;
+	border-radius: 1.5px;
+	color: var(--clr);
+	border: var(--brdr);
+	transition: brdr-offset 2s ease;
+}
+.text:hover, .text:focus{
+	outline: var(--outline);
+	outline-width: 0.3px;
+	outline-offset: 5px;
+	border-radius: 1px;
+}
+.button:hover, .button:focus{
+	boutline: var(--brdr);
+	brdr-width: 1px;
+	brdr-offset: 5px;
+	border-radius: 3px;
+}
