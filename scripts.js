@@ -18,3 +18,4 @@ $(document).ready(function() {
 	});
 });
 //lol idi na huy))))
+//timlid pidor!
