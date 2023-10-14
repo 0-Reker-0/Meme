@@ -1,4 +1,4 @@
-<DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -7,14 +7,48 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src = "scripts.js"></script>
+		<link rel = "icon" href = "favicon.png" type = "image/x-icon">
 	</head>
 	<body>
 	<div id = "main">
 		<h1>Вход</h1>
 		<form>
-			<p><input type = "button" name = "login" class = "button" id = "login" value = "Войти"></p>
-			<p></p><input type = "button" name = "registr" class = "button" id = "registr" value = "Зарегестрироваться"></p>
+			<p><input type = "button" class = "button" id = "login" value = "Войти"></p>
+			<p><input type = "button" class = "button" id = "registr" value = "Зарегестрироваться"></p>
 		</form>
+	</div>
+	<div id = "login_form">
+		<h1>Авторизация</h1>
+		<form action = "client/login.php" method = "POST">
+			<p><input type = "text" name = "username" class = "text" required placeholder = "Введите логин"></p>
+			<p><input type = "password" name = "password" class = "text" required placeholder = "Введите пароль"></p>
+			<p><input type = "text" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
+			<p><input type = "submit" name = "submit" class = "button" id = "entr" value = "Войти"></p>
+		</form>
+		<input type = "button" class = "button" id = "registr_frm_logn" value = "Зарегестрироваться">
+		<input type = "button" class = "button" id = "email_enter" value = "Войти по email">
+	</div>
+	<div id = "reg_form">
+		<h1>Регистрация</h1>
+		<form action = "client/registration.php" method = "POST">
+			<p><input type = "text" name = "logn" class = "text" required placeholder = "Введите код-слово"></p>
+			<p><input type = "email" name = "email" class = "text" required placeholder = "Введите email"></p>
+			<p><input type = "password" name = "password" class = "text" required placeholder = "Введите пароль"></p>
+			<p><input type = "password" name = "password_2" class = "text" required placeholder = "Введите пароль повторно"></p>
+			<p><input type = "text" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
+			<p><input type = "submit" name = "submit" class = "button" id = "registration" value = "Регистрация"></p>
+		</form>
+	</div>
+	<div id = "email_form">
+		<h1>Войти по email</h1>
+		<form action = "client/email_veref.php" method = "POST">
+			<p><input type = "email" name = "email" class = "text" required placeholder = "Введите email"></p>
+			<p><input type = "text" name = "code" class = "text" required placeholder = "Введите код"></p>
+			<p><input type = "submit" name = "submit" class = "button" id = "entr" value = "Вход"></p>
+		</form>
+	</div>
+	<div id = "navigation">
+		<input type = "button" class = "button" id = "back" value = "←">
 	</div>
 	</body>
 </html>
