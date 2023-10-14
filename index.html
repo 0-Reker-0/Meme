@@ -20,35 +20,36 @@
 	<div id = "login_form">
 		<h1>Авторизация</h1>
 		<form action = "client/login.php" method = "POST">
-			<p><input type = "text" name = "username" class = "text" required placeholder = "Введите логин"></p>
-			<p><input type = "password" name = "password" class = "text" required placeholder = "Введите пароль"></p>
-			<p><input type = "text" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
-			<p><input type = "submit" name = "submit" class = "button" id = "entr" value = "Войти"></p>
+			<p><input type = "text" autocomplete="off" name = "username" class = "text" required placeholder = "Введите логин"></p>
+			<p><input type = "password" autocomplete="off" name = "password" class = "text" required placeholder = "Введите пароль"></p>
+			<p><input type = "text" autocomplete="off" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
+			<p><input type = "button" id = "submit_login" class = "button" id = "entr" value = "Войти"></p>
 		</form>
 		<input type = "button" class = "button" id = "registr_frm_logn" value = "Зарегестрироваться">
 		<input type = "button" class = "button" id = "email_enter" value = "Войти по email">
 	</div>
 	<div id = "reg_form">
 		<h1>Регистрация</h1>
-		<form action = "client/registration.php" method = "POST">
-			<p><input type = "text" name = "logn" class = "text" required placeholder = "Введите код-слово"></p>
-			<p><input type = "email" name = "email" class = "text" required placeholder = "Введите email"></p>
-			<p><input type = "password" name = "password" class = "text" required placeholder = "Введите пароль"></p>
-			<p><input type = "password" name = "password_2" class = "text" required placeholder = "Введите пароль повторно"></p>
-			<p><input type = "text" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
-			<p><input type = "submit" name = "submit" class = "button" id = "registration" value = "Регистрация"></p>
+		<form method = "POST">
+			<p><input type = "text" autocomplete="off" name = "logn" class = "text" required placeholder = "Введите логин"></p>
+			<p><input type = "email" autocomplete="off" name = "email" class = "text" required placeholder = "Введите email"></p>
+			<p><input type = "password" autocomplete="off" name = "password_1" class = "text" required placeholder = "Введите пароль"></p>
+			<p><input type = "password" autocomplete="off" name = "password_2" class = "text" required placeholder = "Введите пароль повторно"></p>
+			<p><input type = "text" autocomplete="off" name = "code-word" class = "text" required placeholder = "Введите код-слово"></p>
+			<p><input type = "button" id = "submit_reg" class = "button" id = "registration" value = "Регистрация"></p>
 		</form>
 	</div>
 	<div id = "email_form">
 		<h1>Войти по email</h1>
-		<form action = "client/email_veref.php" method = "POST">
-			<p><input type = "email" name = "email" class = "text" required placeholder = "Введите email"></p>
-			<p><input type = "text" name = "code" class = "text" required placeholder = "Введите код"></p>
-			<p><input type = "submit" name = "submit" class = "button" id = "entr" value = "Вход"></p>
+		<form method = "POST">
+			<p><input type = "email" autocomplete="off" name = "email" class = "text" required placeholder = "Введите email"></p>
+			<p><input type = "text" autocomplete="off" name = "code" class = "text" required placeholder = "Введите код"></p>
+			<p><input type = "button" id = "submit_email" class = "button" id = "entr" value = "Вход"></p>
 		</form>
 	</div>
 	<div id = "navigation">
 		<input type = "button" class = "button" id = "back" value = "←">
 	</div>
+	<h3 id = "errors"></h3>
 	</body>
 </html>
